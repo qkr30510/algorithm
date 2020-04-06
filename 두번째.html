@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>문제 이름: 2058. 자릿수 더하기</h1>
+    <p>하나의 자연수를 입력 받아 각 자릿수의 합을 계산하는 프로그램을 작성하라.</p>
+    <p>자연수 N은 1부터 9999까지의 자연수이다. (1 ≤ N ≤ 9999)</p>
+    <a href="https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV5QPRjqA10DFAUq&categoryId=AV5QPRjqA10DFAUq&categoryType=CODE"
+        target="_blank">문제출처: SW Expert Academy</a>
+    <div style="margin-top:2em">
+        <input type="text" id="inputId" maxlength="4" placeholder="숫자를 입력해주세요."  >
+        <button onclick=sum();>클릭</button>
+    </div>
+
+    <script>
+        function sum() {
+            var inputValue = document.getElementById('inputId').value;
+            solution(inputValue);
+            function solution(n) {
+                var num = n;
+                var num_arr = num.split('');
+                var answer = 0;
+                for (var j = 0 in num_arr) {
+                    answer += Number(num_arr[j]);
+                }
+                console.log(answer )
+                return answer;
+            }
+        }
+
+
+
+    </script>
+</body>
+
+</html>
