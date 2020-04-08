@@ -41,19 +41,31 @@
                 //저거 ! 날짜 유효성 검사해야지! 
                 //일단 달부터 1~ 12월까지 제한을 둬보자                 
                 //달은 if
+
                 if (m > 12) {
                     alert("달은 12보다 클 수 없습니다");
                     return;
                 }
+                var Even = m%2;
+                var a = 1;
 
-                if (m % 2 === 0) {
-                    if(d<32){
-                        return;
-                    }                    
+                switch (Even) {
+                    case 0:
+                        a = 30;
+                        break;
+                    case 1:
+                        a = 31;
+                        break;
+                    default:
+                        break;
+                }
 
-                } else{
-                    alert("홀")
-                }                 
+                if( d <= a ) {
+                    //prit();
+                }
+
+                
+
             }
             alert(y + "/" + m + "/" + d)
             //alert(inputValue)
