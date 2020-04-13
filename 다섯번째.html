@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>문제 이름: 두 수 비교하기</h1>
+    <p>두 정수 A와 B가 주어졌을 때, A와 B를 비교하는 프로그램을 작성하시오.</p>
+    <a href="https://www.acmicpc.net/problem/1330" target="_blank">문제출처:
+        백준알고리즘</a>
+    <ul>
+        <li>다음 중 한가지를 출력한다.</li>
+        <li>A가 B보다 큰 경우에는 '>'를 출력한다.</li>
+        <li>A가 B보다 작은 경우에는 '<'를 출력한다.</li>
+        <li>A와 B가 같은 경우에는 '=='를 출력한다.</li>
+    </ul>
+    <div><input type="text" id="input1" placeholder="input1"><input type="text" id="input2" placeholder="input2"><button
+            type="button" onclick="playCheck()">확인</button></div>
+    <div style="margin-top:2em">
+        <h3>풀이</h3>
+        <ul>
+            <li>맨 처음에 내가 원하는 값이 나오지않아서 당황했다. 일고보니 그냥 value 값만 가져와서 비교하니까 문자로 인식해서 값이 다르게 나온거였다.</li>
+            <li>Number(value1)이런식으로 해서 숫자로 변환해서 풀어줌. 뭔가 한번에 줄여서 확인해주는 방법이 있을꺼 같은데..</li>
+        </ul>
+    </div>
+
+    <script>
+        //playCheck('5','10');        
+        //function playCheck(value1,value2) {
+        function playCheck() {
+            var value1 = document.getElementById("input1").value;
+            var value2 = document.getElementById("input2").value;
+  
+            
+                if (Number(value1) == Number(value2)) {
+                    console.log(value1 + "==" + value2)
+                }
+                if (Number(value1) < Number(value2)) {
+                    console.log(value1 + "<" + value2)
+                }
+                if (Number(value1) > Number(value2)) {
+                    console.log(value1 + ">" + value2)
+                }
+            
+
+        }
+
+    </script>
+</body>
+
+</html>
