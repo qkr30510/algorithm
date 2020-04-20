@@ -18,6 +18,14 @@
         <input type="number" id="check_date" placeholder="숫자를 입력해주세요." maxlength="8">
         <button onclick=solution()>확인</button>
     </div>
+    <div>
+        <h3>풀이</h3>
+        <ul>
+            <li>input은  0~3000이에 해당해야해야해서 if 문 안에 먼저 넣어주었다.</li>
+            <li>나머지연산자인 %를 이용하여 0이 나올때를 계산하였다.</li>
+            <li>0 이 나올때가 약수이기 때문에 그때 answer과 i값이 더해진다. 그 if문이 for문이 끝날때 까지 반복이기 때문에 최종 answer는 총 합이 나오게 된다.</li>
+        </ul>
+    </div>
     <script>
         function solution(n) {
             var input = document.getElementById("check_date").value;
@@ -25,10 +33,11 @@
             if (input>0 && input <= 3000){
                 for(var i=1; i<= input; i++){
                     if(input%i === 0){
-                        answer +=i
+                        answer = answer + i
+                        console.log("answer",answer,"i",i)
                     }
                 }
-                console.log(answer)
+                console.log(answer,i)
                 return answer;
                 
             }else{
