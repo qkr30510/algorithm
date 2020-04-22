@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>문제 이름: 수박수박수박</h1>
+    <p>해당 문제는 사이트 정책상 아래 사이트를 방문하여 확인하실 수 있습니다.</p>
+    <a href="https://programmers.co.kr/learn/courses/30/lessons/12922" target="_blank">문제출처: 프로그래머스</a>
+    <div>
+        <ul>
+            <li>길이가 n이고, 수박수박수박수....와 같은 패턴을 유지하는 문자열을 리턴하는 함수, solution을 완성하세요. </li>
+            <li>예를들어 n이 4이면 수박수박을 리턴하고 3이라면 수박수를 리턴하면 됩니다.</li>
+        </ul>
+    </div>
+    <div>
+        <h3>풀이</h3>
+        <ul>
+            <li>오류 1.
+                <pre>function solution(n) {
+                var answer = '';
+                    (n%2===0)? answer='수박수박' : answer='수박수'                                        
+                return answer;
+            }
+            나는 단순히 길이를 2로 나누엇을때와 아니었을때만 구분하여 수박수박과 수박수를 리턴하였었다. 
+            근데 해당 문제는 문자열이기 때문에 이렇게 하면 안되었었다. 
+            제일 간단하게는 repeat 메서드를 이용하여 '수박'이라는 메서드를 반복해주는것이다.
+            "return '수박'.repeat(n)" // repeat(n) -> n자리에 몇번 반복되어야하는지 써줘야함.
+            조건이 n이 4이면 수박수박을 리턴하고, 3이면 수박수를 리턴하는거기 때문에 그 자리에 조건을 넣어주면 된다.
+        </pre>
+            </li>
+            <li>
+                <pre>
+                    function solution(n) {
+                        var answer = '';                                                           
+                        return '수박'.repeat(n/2) + '수'.repeat(n%2);
+                    }
+                </pre>
+            </li>
+        </ul>
+    </div>
+    <script>
+        function solution(n) {
+            var answer = '';
+            return '수박'.repeat(n / 2) + '수'.repeat(n % 2);
+        }
+    </script>
+</body>
+
+</html>
