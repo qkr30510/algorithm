@@ -48,6 +48,30 @@
             var answer = '';
             return '수박'.repeat(n / 2) + '수'.repeat(n % 2);
         }
+           
+        // 실행을 위한 테스트코드입니다.
+        console.log("n이 3인 경우: "+ solution(3))
+        console.log("n이 4인 경우: "+ solution(4))
+        
+
+        // 슬기씨 풀이 
+
+        /*const solution = (number) => {
+            var result = '';
+
+            var text = ['수', '박']; // 0번째가 수. 1번째가 박
+            for (var v = 0; v < number; v++) {
+                result += text[v % 2];
+                //result = result + text[v%2];
+                //result = result + text[v%2];
+            }
+            return result;
+        }
+
+        solution(3);
+        solution(4);
+        // 숫자 3이 들어가면, number에 숫자 3이 들어가고 v는 숫자 3보다 0,1,2가 됨.
+        */
     </script>
 </body>
 
