@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>문제 이름: 별 찍기 문제</h1>
+    <a href="https://www.acmicpc.net/problem/2438"
+        target="_blank">문제출처: 백준 알고리즘</a>
+    <div>
+        <ul>
+            <li>첫째 줄에는 별 1개, 둘째 줄에는 별 2개, N번째 줄에는 별 N개를 찍는 문제 </li>
+            <li>첫째 줄에 N(1 ≤ N ≤ 100)이 주어진다.</li> 
+            <li>첫째 줄부터 N번째 줄까지 차례대로 별을 출력한다.</li>           
+        </ul>
+        <button onClick="star()">클릭!</button>
+    </div>
+    <div>
+        <h3>풀이</h3>
+        <ul>
+            <li>줄과 별의 갯수가 일치해야하기 때문에 반복문을 이중으로 사용하였다.</li>
+            <li>그리고 줄 바꿈을 사용하기 위해 \n을 사용하였는데 처음 알게 되었다.</li>
+        </ul>
+    </div>
+    <script>
+        function star(){            
+            var star =''
+            for(var i=0; i <=100; i++ ){                
+                for(var n=0; n<=i; n++){
+                   star += "*";
+                   //star = star + "*"
+                }
+                star += "\n";
+            }
+            console.log(star)
+        }
+       
+    </script>
+</body>
+
+</html>
