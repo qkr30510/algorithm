@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>문제 1: 배열의 삭제</h1>
+    <p>다음 배열에서 400, 500을 삭제하는 code를 입력하세요.</p>
+    <p>var nums =[100, 200, 300, 400, 500]</p>
+    <div>
+        <h3>답</h3>
+        <pre>
+            var num = [100, 200, 300, 400, 500];
+            var newNum = num.filter(function(element, index, array){
+                return index < 3
+                //console.log('element',element);
+                //console.log('index',index);
+                //console.log('array',array);
+            })
+            console.log(newNum)
+        </pre>
+    </div>
+    <div>
+        <h3>해석</h3>
+        <ul>
+            <li>filter를 이용하는 문제이다.</li>
+            <li>filter(function(element,index,array){}) 외울것.</li>
+        </ul>
+    </div>
+</body>
+<script>
+        var num = [100, 200, 300, 400, 500];
+        var newNum = num.filter(function(element, index, array){
+            return index < 3
+            //console.log('element',element);
+            //console.log('index',index);
+            //console.log('array',array);
+        })
+        console.log(newNum)            
+</script>
+</html>

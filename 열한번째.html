@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>문제 1: 배열의 내장함수</h1>
+    <p><pass>부분에 배열 내장함수를 이용하여 코드를 입력하고 다음과 같이 출력되게 하세요.</p>
+    <pre>
+        데이터
+        var arr =[200, 100, 300];
+        //pass
+        console.log(arr);
+
+        출력
+        [200,100,10000,300]
+    </pre>
+    <div>
+        <h3>답</h3>
+        <pre>
+            var arr = [200, 100, 300];
+            //pass
+            //console.log(arr);
+            var newArr = arr.splice(arr,2)
+            var fArr = [...newArr,10000,300]
+            console.log(fArr)
+        </pre>
+    </div>
+    <div>
+        <h3>해석</h3>
+        <ul>
+            <li>splice를 이용해서 300을 먼저 지우고 스프레드 연산자를 이용해서 새롭게 생성하여 넣었다.</li>
+        </ul>
+    </div>
+</body>
+<script>
+        var arr = [200, 100, 300];
+        //pass
+        //console.log(arr);
+        var newArr = arr.splice(arr,2)
+        var fArr = [...newArr,10000,300]
+        console.log(fArr)
+</script>
+</html>
