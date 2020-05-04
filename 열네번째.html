@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>문제1)concat을 활용한 출력 방법</h1>    
+    <pre>
+        다음 소스 코드를 완성하여 날짜와 시간을 출력하시오.
+        데이터
+        var year = '2019';
+        var month = '04';
+        var day = '26';
+        var hour = '11';
+        var minute = '34';
+        var second = '27';
+
+        var result = // 빈칸을 채워주세요
+        console.log(result);
+
+        출력 2019/04/26 11:34:27
+
+    </pre>
+    <p  style="color:red">var result = year.concat('/', month, '/', day, ' ', hour, ':', minute, ':', second);</p> 
+    <ul>
+        <li>해석</li>
+        <li>concat은 인수가 배열이면 그 구성요소가 순서대로 붙고, 배열이 아니면 인수 자체가 붙는다</li>
+        <li>난 배열로 만들어서 만들었더니 문제가 원하는 그림이 나오지않아 꽤 고생했었다.</li>
+    </ul>    
+    <script>
+   var year = '2019';
+        var month = '04';
+        var day = '26';
+        var hour = '11';
+        var minute = '34';
+        var second = '27';
+
+        var result =  year.concat('/', month, '/', day, ' ', hour, ':', minute, ':', second);// 빈칸을 채워주세요
+        console.log(result);
+
+        //출력 2019/04/26 11:34:27 
+    </script>     
+</body>
+</html>
