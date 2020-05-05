@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>문제1) for를 이용한 기본 활용</h1>
+    <p>1부터 100까지 모두 더하는 Code를 <pass>부분에 완성하세요. for를 사용해야합니다.</p>
+    <pre>
+        let s = 0;
+        //pass
+        console.log(s)        
+    </pre>
+    <script>
+        let s = 0;
+        for(let i=0; i<=100; i++){
+            console.log(s+=i)
+        }
+    </script>
+    <h1>문제2) 게임 캐릭터 클래스 만들기</h1>
+    <p>다음 소스코드에서 클래스를 작성하여 게임 캐릭터의 능력치와 '파이어볼'이 풀력되게 만드시오. <b>소스 코드 수정하면 안됨</b></p>
+    <pre>
+        데이터
+        <여기에 class를 작성하세요>
+
+        const x = new Wizard(545,,210, 10);
+        console.log(x.health, x.mana, x.armor);
+        x.attack();
+
+        출력
+        545 210 10
+        파이어볼
+    </pre>
+    <script>
+        
+        const Wizard = class Wizard {
+            constructor (health, mana, armor) {
+                this.health = health;
+                this.mana = mana;
+                this.armor = armor;
+            }
+            attack(){
+                console.log('파이어볼');
+            }
+        }
+        const x = new Wizard(545, 210, 10);
+        console.log(x.health, x.mana, x.armor, x.attack);
+         x.attack();
+
+        // 출력
+        // 545 210 10
+        // 파이어볼
+        
+    </script>    
+</body>
+</html>
