@@ -11,7 +11,14 @@
     <pre>
         let s = 0;
         //pass
-        console.log(s)        
+        console.log(s)                
+    </pre>
+    <p style="color:red">답</p>    
+    <pre>
+        let s = 0;
+        for(let i=0; i<=100; i++){
+            console.log(s+=i)
+        }        
     </pre>
     <script>
         let s = 0;
@@ -33,6 +40,34 @@
         545 210 10
         파이어볼
     </pre>
+    <p style="color:red">답</p>
+    <pre>
+        
+        const Wizard = class Wizard {
+            constructor (health, mana, armor) {
+                this.health = health;
+                this.mana = mana;
+                this.armor = armor;
+            }
+            attack(){
+                console.log('파이어볼');
+            }
+        }
+        const x = new Wizard(545, 210, 10);
+        console.log(x.health, x.mana, x.armor, x.attack);
+         x.attack();
+
+        // 출력
+        // 545 210 10
+        // 파이어볼        
+    </pre>
+    <div>
+        <ul>
+            <li>설명</li>
+            <li>1. js에서 클래스를 작성하라는 것은 객체 단위로 코드 그룹화 및 코드 재사용성을 사용하기 위함. </li>
+            <li>2. constructor메서드는 class 내에서 객체를 생성하고 초기화하기 위한 특별한 메서드이다.</li>
+        </ul>
+    </div>
     <script>
         
         const Wizard = class Wizard {
