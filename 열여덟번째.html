@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>자기소개</h1>
+    <p>신학기가 시작되고 아이들이 돌아가면서 자기소개를 하기로 했습니다.<br>
+    만약, 이름이 김다정이라면, 안녕하세요 김다정입니다.라고 출력하게 해주세요.
+    </p>
+<pre>
+    입출력
+    입력: 김다정
+    출력: 안녕하세요. 저는 김다정입니다. 
+</pre>
+<input type="text" id="name"> 
+<button onclick="check()">입력</button>
+<script>
+    function check(){
+        const value = document.getElementById('name').value;
+        const sentence = "안녕하세요. 저는"+''+value+"입니다."
+        console.log(sentence)
+    }
+</script>
+<p style="color:red">내가 쓴 답</p>
+<pre>
+    function check(){
+        const value = document.getElementById('name').value;
+        const sentence = "안녕하세요. 저는"+''+value+"입니다."
+        console.log(sentence)
+    }    
+</pre>
+<p style="color:red">요구 한 답</p>
+<pre>
+    const name = prompt('이름을 입력하세요.');
+
+    console.log(`안녕하세요. 저는 ${name}입니다.`); 
+    /*
+    * es6부터는 backtick 문자열(``) 안에서 $와 중괄호로 표현식을 사용할 수 있습니다. 
+    * 이를 템플릿 리터럴(Template literals)이라 합니다.
+    */  
+</pre>
+<ul>
+    <li>es6부터는 backtick 문자열(``) 안에서 $와 중괄호로 표현식을 사용할 수 있습니다.</li>
+    <li> 템플릿 리터럴(Template literals) 외울 것</li>
+</ul>
+</body>
+</html>
