@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>문제 16) 로꾸거</h1>
+    <p>문장이 입력되면 거꾸로 출력하는 프로그램을 만들어 봅시다.</p>
+<pre>
+    입출력
+    입력: 거꾸로
+    출력: 로꾸거
+</pre> 
+<input type="text" id="name">   
+<button onclick="test()">입력</button>
+<script>
+    function test(){
+        const value = document.getElementById('name').value;
+        
+        if(!value){
+            console.log("입력해주세요")
+        }else{
+            const va = value.split("").reverse().join("")
+            console.log(va)         
+               
+        }
+    }
+</script>
+<p style="color:red">내가 쓴 답</p>
+<pre>
+    function test(){
+        const value = document.getElementById('name').value;
+        
+        if(!value){
+            console.log("입력해주세요")
+        }else{
+            const va = value.split("").reverse().join("")
+            console.log(va)         
+               
+        }
+    }    
+</pre>
+<h1>해설</h1>
+<ul>
+    <li>split을 이용하여 배열을 만들어 주고 </li>
+    <li>reverse을 이용하여 반대로 뒤집어 주고 </li>
+    <li>join을 이용하여 다시 합쳐줌!</li>
+</ul>
+<h1>문제2) 놀이기구 키 제한</h1>
+<p>유주는 놀이공원 아르바이트 중입니다. 그런데 놀이기구 마다 키 제한이 있습니다. <br>
+유주가 담당하는 놀이기구는 키가 150cm 이상만 탈 수 있습니다. <br> 입력으로 키가 주어지면,<br>
+키가 150이 넘으면 <b>yes를 틀리면 NO를 출력</b>하는 프로그램을 작성하세요</p>
+<input type="number" id="tall">
+<button onclick="tallchx()">클릭</button>
+<script>
+    function tallchx (){
+        const tallValue = document.getElementById('tall').value;
+        if(tallValue < 150){
+            console.log("NO")
+        }else {
+            console.log("YES")
+        }
+
+    }
+</script>
+<p style="color:red">내가 쓴 답</p>
+<pre>
+    function tallchx (){
+        const tallValue = document.getElementById('tall').value;
+        if(tallValue < 150){
+            console.log("NO")
+        }else {
+            console.log("YES")
+        }
+
+    }    
+</pre>
+<h1>문제3) 평균점수</h1>
+<p>영하네 반은 국어, 수학, 영어 시험을 보았습니다. 영하는 친구들의 평균 점수를 구해주기로 했습니다. <br>
+공백으로 구분하여 세 과목의 점수가 주어지면 <b>전체 평균 점수</b>구하는 프로그램을 작성하세요.<br>
+단, 소숫점 자리는 모두 버립니다.</p>
+<pre>
+    입출력
+    입력: 20 30 40
+    출력: 30
+</pre>
+<input type="number" id="test1">
+<input type="number" id="test2">
+<input type="number" id="test3">
+<button onclick="testchx()">클릭</button>
+<script>
+    function testchx (){
+        const ftestValue = document.getElementById('test1').value;
+        const stestValue = document.getElementById('test2').value;
+        const ttestValue = document.getElementById('test3').value;
+        console.log(ftestValue,stestValue,ttestValue )
+      
+        const plus = Number(ftestValue)+Number(stestValue)+Number(ttestValue)
+        console.log(Math.floor(plus/3))        
+    }
+</script>
+<p style="color:red">내가 쓴 답</p>
+<pre>
+    function testchx (){
+        const ftestValue = document.getElementById('test1').value;
+        const stestValue = document.getElementById('test2').value;
+        const ttestValue = document.getElementById('test3').value;
+        console.log(ftestValue,stestValue,ttestValue )
+      
+        const plus = Number(ftestValue)+Number(stestValue)+Number(ttestValue)
+        console.log(Math.floor(plus/3))     
+    }  
+</pre>
+<p style="color:red">요구한 답</p>
+<pre>
+    const ftestValue = document.getElementById('test1').value;
+    const stestValue = document.getElementById('test2').value;
+    const ttestValue = document.getElementById('test3').value;
+    const scores = [ftestValue, stestValue, ttestValue]
+    let sum = 0;
+    
+    for (let i=0; i<3; i++){
+      sum += parseInt(scores[i], 10); // 십진수의 형태의 숫자로 데이터 타입을 변환합니다.
+    }
+    
+    console.log(Math.floor(sum/3)); //Math.floor 메서드는 소수점 자리를 모두 버림합니다.
+</pre>
+<h1>해설</h1>
+<ul>
+    <li>scores라는 배열에 각 점수들을 넣음</li>
+    <li>parseInt 문자열을 정수로 바꿔주는 함수이다. 즉, 데이터 타입 문자열을 숫자로 바꾸어 sum이라는 변수에 배열전체를 다 더해준다. </li>
+    <li>Math.floor를 이용하여 소수점 버림을 한다. 비슷한 메서드로 / Math.ceil(): 소수점 이하를 올림 /  Math.round(): 소수점 이하를 반올림 하는 것이 있다.</li>
+</ul>
+</body>
+</html>
