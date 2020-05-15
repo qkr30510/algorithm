@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>문제1)2-gram</h1>
+    <p>2-gram이란 문자열에서 2개의 연속된 요소를 출력하는 방법입니다. <br>
+        예를 들어 'Javascript'를 2-gram으로 반복해 본다면 다음과 같은 결과가 나옵니다.<br>
+        입력으로 문자열이 주어지면 2-gram으로 출력하는 프로그램을 작성해 주세요
+    </p>
+    <pre>
+        입력
+        Javascript
+
+        출력
+        J a
+        a v
+        v a
+        a s
+        s c
+        c r
+        r i
+        i p
+        p t
+    </pre>
+    <script>
+        const aa = prompt("입력")
+        console.log(aa);
+
+        for(let i=0; i<aa.length-1; i++){
+            console.log(aa[i],aa[i+1])
+        }
+    </script>
+    <pre>
+        const aa = prompt("입력")
+        console.log(aa);
+
+        for(let i=0; i<aa.length-1; i++){
+            console.log(aa[i],aa[i+1])
+        }        
+    </pre>
+    <ul>
+        <li>해설</li>
+        <li>for문으로 돌린 값에 aa변수를 불러 그 안에 i값을 넣으면 하나씩 호출됨.</li>
+        <li>2-gram으로 불러야 하니까 ,후 aa[i+1] +1로 하나 더 불러줘야한다.</li>
+        <li> i 의 값을 aa.length -1 해준 이유는 마지막 값이 undefind 뜨기때문에.  </li>
+    </ul>
+</body>
+
+</html>

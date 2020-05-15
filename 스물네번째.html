@@ -22,8 +22,8 @@
         {'Yujin': 70, 'Hyewon': 100}        
     </pre>
     <script>
-        const name = prompt('이름을 입력해주세요.').split();
-        const math = prompt('점수를 입력해주세요.').split();
+        const name = prompt('이름을 입력해주세요.').split(' ');
+        const math = prompt('점수를 입력해주세요.').split(' ');
         const aa = {};
 
         for (let i = 0; i < name.length; i++) {
@@ -38,7 +38,7 @@
         const aa = {};
         
         for(let i = 0; i < name.length;  i++){
-            aa[name[i]] = parseInt(math[i], 10);
+            aa[name[i]] = parseInt(math[i], 10);            
         }
         console.log(aa);
     </pre>
@@ -46,6 +46,7 @@
     <li>해설</li>
     <li>split() 메서드를 통해 배열로 만들어준다.</li>
     <li>객체[값]이기 때문에 aa[name]은 aa객체의 값name =은 math이다 </li>
+    <li>하나의 규칙이다. aa[1번쨰는 key값 = value값]</li>
 
 </ul>
 
