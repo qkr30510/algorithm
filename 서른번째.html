@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>문제1) 거꾸로 출력하기</h1>
+    <p>한 줄에 여러개의 숫자가 입력되면, 역순으로 그 숫자들을 하나씩 출력하는 프로그램을 작성하시오.</p>
+    <pre>
+        입출력
+
+        입력 : 1 2 3 4 5
+        출력 : 5 4 3 2 1
+
+        입력 : 2 4 6 7 8
+        출력 : 8 7 6 4 2
+    </pre>
+    <script>
+        const pro = prompt('숫자를 입력하세요').split('').reverse();
+        console.log(pro);
+        let result = '';
+
+        for(let i = 0 ; i < pro.length; i ++){
+            console.log(result += pro[i])
+        }
+        console.log(result)
+    </script>
+    <pre>
+        const pro = prompt('숫자를 입력하세요').split('').reverse();
+        console.log(pro);
+        let result = '';
+
+        for(let i = 0 ; i < pro.length; i ++){
+            console.log(result += pro[i])
+        }
+        console.log(result)        
+    </pre>   
+    <ul>
+        <li>해설</li>
+        <li>맨 처음에 문제를 잘 읽지 않았었다 ㅠㅠ 그 숫자들을 하나씩 출력했어야했는데, 난 그냥 단순하게 텅 하고 내보냈었다.</li>
+        <li>암튼, 맨처음 배열로 만들어서 뒤집는 메서드인 reverse를 사용해서 배열을 거꾸로 만들어준다.</li>
+        <li>그리고 하나씩 출력되어야하기때문에 for문을 사용해야하는데, 답인 pro의 값을 추출해야하기때문에 result 값에 pro를 넣어주고 하나씩 나와야하기때문에 배열을 뜻하는 []에 i값을 넣어 pro[i]값을 넣어준다.</li>
+        <li>console.log를 for문 안에다가 찍으면 5,54,543,5432,54321 이런식으로 다 노출이 되기때문에 최종값은 for문 바깥에다가 찍어준다.</li>
+    </ul> 
+</body>
+</html>
