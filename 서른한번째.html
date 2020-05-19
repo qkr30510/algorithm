@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>문제1) sort 구현하기</h1>
+    <p>민주는 체육부장으로 체육시간이 되면 반 친구들이 제대로 키 순서대로 모였는지를 확인해야 한다. <br>
+        그런데 요즘 민주는 그것이 너무 번거롭게 느껴져 한 번에 확인하고 싶어한다. 
+
+        민주를 위해 키가 주어지면 순서대로 제대로 섰는지 확인하는 프로그램을 작성해보자.
+        (키는 공백으로 구분하여 입력됩니다.)</p>
+        <pre>
+            입출력
+
+            입력 : 176 156 155 165 166 169
+            출력 : NO
+            
+            입력 : 155 156 165 166 169 176
+            출력 : YES            
+        </pre>
+        <script>
+            const pro = prompt('입력');
+            const proValue = pro.split(' ').join();
+                     
+            const pro2 = pro.split(' ').sort(function(a,b){
+                return a - b
+            }).join();
+            
+            if(proValue === pro2) {
+                console.log("YES")
+            }else{
+                console.log("NO")
+            }
+            console.log(typeof(proValue),typeof(pro2))
+
+        </script>
+        <ul>
+            <li>해설</li>
+            <li>맨처음엔 prompt 값을 변수1에 넣고 sort 한 값을 변수 2에 넣어 비교하는 방식으로 진행했다. 근데, sort는 복사본이 만들어지는게 아니라 원 배열이 정렬되는거라 변수1 자체도 변경이 되는거라 비교 자체가 안되었었다.</li>
+            <li>그래서 배열로만 되어있는 변수1과 sort로 되어있는 변수2를 주고 값을 비교하였다.</li>
+            <li>둘다 오브젝트라 '==='가 안맞기 때문에 join메서드를 통해 type을 맞춰주었다.</li>
+            <li>sort메서드는 http://dudmy.net/javascript/2015/11/16/javascript-sort/ 를 참고하면 좋을꺼같다.</li>
+        </ul>
+</body>
+</html>
