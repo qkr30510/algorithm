@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Factory 함수 사용하기</h1>
+    <p>2제곱, 3제곱, 4제곱을 할 수 있는 Factory 함수를 만들려고 합니다.
+
+        제공되는 코드에 작성하여 two함수를 완성하세요.</p>
+    <pre>
+        ```jsx
+            function one(n){
+                function two(){
+                    //pass
+                }
+                return two;
+            }
+
+            const a = one(2);
+            *const b = one(3);
+            const c = one(4);*
+
+            console.log(a(10));
+            console.log(b(10));
+            console.log(c(10));
+            ```
+    </pre>
+    <script>
+        // 제곱이란, n이 2이면, 2*2
+        //n의 개수만큼, n번씩 곱해야함
+        function one(n) {
+            function two(value) {
+                console.log(n, value)
+               const qq = Math.pow(value,n);
+               return qq;
+            }
+            return two;
+        }
+
+        const a = one(2);
+        const b = one(3);
+        const c = one(4);
+
+        console.log('a',a(10));
+       console.log(b(10));
+       console.log(c(10));
+    </script>
+    <pre>
+
+    </pre>
+    <ul>
+        <li>해설</li>
+        <li>Factory 함수 사용해야하는 문제였다. </li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</body>
+
+</html>
