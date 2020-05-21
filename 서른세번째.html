@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>문제1) 구구단 출력하기</h1>
+    <p>1~9까지의 숫자 중 하나를 입력하면 그 단의 구구단 결과를 한 줄에 출력하는 프로그램을 작성하세요.</p>
+    <pre>
+        입출력
+
+        입력 : 2
+        출력 : 2 4 6 8 10 12 14 16 18        
+    </pre>
+    <script>
+        const n = prompt('구구단이 필요한 숫자를 입력하세요.')
+
+        function gugudan(x){
+            let result = ''
+            let result1 = [];
+            for(let i=1; i<9; i++){ 
+                console.log('result', result += n*i + ' ');        
+            }
+            console.log('resultttt',result);
+            
+        }
+        gugudan();
+    </script>
+    <pre>
+        ```jsx
+        const n = prompt('구구단이 필요한 숫자를 입력하세요.')
+
+        function gugudan(x){
+            let result = ''
+            let result1 = [];
+            for(let i=1; i*<*9; i++){ 
+                console.log('result', result += n*i + ' ');        
+            }
+            console.log('resultttt',result);
+            
+        }
+        gugudan();
+        ```
+    </pre>
+    <pre>
+        출제자 정답
+        const num = prompt('1 ~ 9까지의 숫자 중 하나를 입력하세요.')
+        let result = '';
+        
+        for (let i=1; i<=9; i++){
+          result += i*num + ' ';
+        }
+        
+        console.log(result);        
+    </pre>
+    <ul>
+        <li>해설</li>
+        <li>한줄로 표현하기가 어려워 한참을 고생했었는데, 그냥 단순히 뒤에 ' ' 빈칸만 붙이면 되었었다.. 허무하다.</li>
+        
+    </ul>
+</body>
+</html>
