@@ -22,13 +22,21 @@
     // 중복되는 학생이름을 제거하기
     // 이름과 동일한 학생 개수 찾기;
 
+    // 카운트와 맵
+
     const pro = prompt('입력해주세여').split(' ')
     const proFilter = pro.filter((item, index) => pro.indexOf(item) === index);
     console.log(pro, proFilter);
+    // pro = 전체 이름
+    // proFilter = 중복된 사람의 이름
 
-    for(let proFilter in pro){
-      console.log(proFilter[pro])
-    }
+    // for(let proFilter in pro){
+    //   console.log(proFilter[i])
+    // }
+
+    // for(let i=0; i<pro.length ; i++){
+    //   indexOf
+    // }
 
   </script>
 
