@@ -21,22 +21,22 @@
     // 학생이름 변수로 만들기
     // 중복되는 학생이름을 제거하기
     // 이름과 동일한 학생 개수 찾기;
+    const array = prompt('이름입력').split(' ');
+    console.log(array);
+    let result = {};
+    let winner = "";
+    for(let index in array){
+      let val = array[index];      
+      result[val] = result[val] === undefined ? 1: result[val]  = result[val] + 1;
+      console.log('val',val) // for in 문 통해서 중복되는 개수 나타내기
+      console.log('result',  result[val]) // result[val] 이용해서 개수가 몇개인지 표현
+      
+    }
+    winner = object.keys(result).reduce(function(a,b){
+      return result[a] >result[b] ? a:b
+    })
 
-    // 카운트와 맵
-
-    const pro = prompt('입력해주세여').split(' ')
-    const proFilter = pro.filter((item, index) => pro.indexOf(item) === index);
-    console.log(pro, proFilter);
-    // pro = 전체 이름
-    // proFilter = 중복된 사람의 이름
-
-    // for(let proFilter in pro){
-    //   console.log(proFilter[i])
-    // }
-
-    // for(let i=0; i<pro.length ; i++){
-    //   indexOf
-    // }
+    console.log(`${winner} (이)가 총 ${result[winner]} 표로 반장이 되었습니다. `)
 
   </script>
 
