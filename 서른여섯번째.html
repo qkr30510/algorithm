@@ -29,16 +29,33 @@
     </pre>
 
     <script>
-        const pro = prompt('입력하세요.').split('');
-        const pros = {...pro}
-        console.log(pro.indexOf('q'))
+       const pro = prompt('입력하세여');
+       console.log(pro.split('q'));
+       console.log(pro.split('q').join('e'));
 
-        console.log(pro, pros);
-        // pro.map((proChange) =>
-        // pros.q = true ? { ... proChange, pros.e}
-        // )        
-        // console.log(change)
+       function tt(pro,oripro,newpro){
+            return pro.split(oripro).join(newpro);
+            
+       }
+       console.log(tt(pro))
+       console.log(tt(pro,'q','e'))
+       
     </script>
+    <pre>
+        const pro = prompt('입력하세여');
+        console.log(pro);
+ 
+        function tt(pro,oripro,newpro){
+             return pro.split(oripro).join(newpro);
+        }
+        console.log(tt(pro,'q','e'))
+                
+    </pre>
+    <ul>
+        <li>split 메소드 안에 글자를 넣으면, 해당 문구는 배열에서 지워짐.</li>
+        <li>그 뒤에 join과 그 안에 글자를 넣으면 join안에 있는 글자로 바뀜</li>
+    </ul>
 </body>
+
 
 </html>
